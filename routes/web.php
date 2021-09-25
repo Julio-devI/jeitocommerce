@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\ShopComponent;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -26,6 +27,8 @@ use Inertia\Inertia;
 });*/
 
 Route::get('/', HomeComponent::class)->name('home');
+
+Route::get('/shop', ShopComponent::class)->name('shop');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
