@@ -30,6 +30,15 @@ Route::get('/', HomeComponent::class)->name('home');
 
 Route::get('/shop', ShopComponent::class)->name('shop');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//Routes for customers and users
+Route::middleware(['auth:sanctum', 'verified'])->group(function() {
+    Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
+});
+
+//Routes for admins
+Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function() {
+    Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+});
+/*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
-})->name('dashboard');
+})->name('dashboard');*/
