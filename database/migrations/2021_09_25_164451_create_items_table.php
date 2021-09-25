@@ -23,12 +23,13 @@ class CreateItemsTable extends Migration
             $table->integer('views');
             $table->decimal('rating_stars');
             $table->decimal('price');
-            $table->integer('shopid')->unique();
+            $table->integer('shopid');
             $table->integer('sales');
             $table->integer('discount_id');
-            $table->text('images');
+            $table->json('images');
             $table->integer('likes');
             $table->integer('item_id')->unique();
+            $table->json('tenures')->nullable();
             $table->timestamps();
         });
     }
