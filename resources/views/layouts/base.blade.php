@@ -80,16 +80,12 @@
 														<a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
 													</li>
 
-													<li class="menu-item">
-														<a title="Categories" href="{{ route('admin.categories') }}">Categories</a>
-													</li>
+													<!-- adicionar a sintaxe na rota <li class="menu-item">
+														<a title="Categories" href="route('admin.categories')">Categories</a>
+													</li>-->
 
 													<li class="menu-item">
-														<a title="Products" href="{{route('admin.products')}}">All Products</a>
-													</li>
-
-													<li class="menu-item">
-														<a title="Manage Home Categories" href="{{route('admin.homecategories')}}"> Manage Home Categories</a>
+														<a title="Items" href="#">All Items</a>
 													</li>
 
 													<li class= "menu-item">
