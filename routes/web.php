@@ -44,6 +44,7 @@ Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function() {
 });
 
 Route::post('/carregar_json', [ItemController::class, 'carregarJson']);
+Route::post('/store', [ItemController::class, 'store']);
 Route::get('/pegar_codigo', [ItemController::class, 'index']);
 
 /*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

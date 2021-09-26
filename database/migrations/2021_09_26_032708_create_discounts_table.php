@@ -15,9 +15,9 @@ class CreateDiscountsTable extends Migration
     {
         Schema::create('discounts', function (Blueprint $table) {
             $table->id();
-            $table->string('label');
-            $table->integer('valor');
-            $table->boolean('ativo');
+            $table->string('label')->nullable();
+            $table->integer('valor')->nullable();
+            $table->boolean('ativo')->default(0);
             $table->timestamps();
         });
     }

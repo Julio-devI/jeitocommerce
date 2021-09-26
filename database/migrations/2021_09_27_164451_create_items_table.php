@@ -20,38 +20,32 @@ class CreateItemsTable extends Migration
             $table->decimal('package_width');
             $table->text('description');
             $table->decimal('weight');
-            $table->integer('views');
-            $table->decimal('rating_star');
+            $table->integer('views')->nullable();
+            $table->decimal('rating_star')->nullable();
             $table->decimal('price');
             $table->integer('shopid');
-            $table->integer('sales');
+            $table->integer('sales')->nullable();
             $table->json('images');
-            $table->integer('likes');
+            $table->integer('likes')->nullable();
             $table->json('tenures')->nullable();
             $table->string('condition');
-            $table->decimal('cmt_count');
+            $table->decimal('cmt_count')->nullable();
             $table->decimal('package_height');
             $table->integer('days_to_ship');
             $table->string('name');
             $table->string('currency');
-            $table->boolean('item_dangerous');
+            $table->boolean('item_dangerous')->nullable();
             $table->string('item_sku');
-            $table->json('variations');
+            $table->json('variations')->nullable();
             $table->boolean('is_2tier_item');
-            $table->string('size_chart');
+            $table->string('size_chart')->nullable();
             $table->decimal('package_length');
             $table->json('video_info');
             $table->boolean('is_pre_order');
             $table->boolean('has_variation');
-            $table->integer('reserved_stock');
+            $table->integer('reserved_stock')->nullable();
             $table->integer('stock');
             $table->timestamps();
-
-            //CHAVE ESTRANGEIRA
-            $table->foreignId('item_id');
-            $table->foreign('item_id')
-               ->references('id')->on('items')
-                ->onUpdate('cascade');
 
             //CHAVE ESTRANGEIRA 
             $table->foreignId('discount_id');
@@ -62,7 +56,7 @@ class CreateItemsTable extends Migration
             //CHAVE ESTRANGEIRA
             $table->foreignId('logistic_id');
             $table->foreign('logistic_id')
-                ->references('id')->on('logistic')
+                ->references('id')->on('logistics')
                 ->onUpdate('cascade');
 
             //CHAVE ESTRANGEIRA

@@ -24,6 +24,25 @@ class Item extends Model
         'images',
         'likes',
         'item_id',
-        'tenures'
+        'tenures',
+        'condition',
+        'cmt_count',
+        'package_height',
+        'days_to_ship',
+        'name',
+        'currency',
+        'item_dangerous',
+        'item_sku',
+        'variations',
+        'is_2tier_item',
+        'size_chart',
+        'package_length',
+        'video_info',
+        'is_pre_order',
+        'has_variation',
+        'reserved_stock',
+        'stock',
+        'logistic_id',
+        'attribute_id'
     ];
 }

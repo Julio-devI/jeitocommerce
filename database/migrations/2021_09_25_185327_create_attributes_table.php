@@ -15,10 +15,10 @@ class CreateAttributesTable extends Migration
     {
         Schema::create('attributes', function (Blueprint $table) {
             $table->id();
-            $table->string('attribute_name');
-            $table->boolean('is_mandatory');
-            $table->string('attribute_value');
-            $table->string('string_type');
+            $table->string('attribute_name')->nullable();
+            $table->boolean('is_mandatory')->nullable();
+            $table->string('attribute_value')->nullable();
+            $table->string('string_type')->nullable();
             $table->timestamps();
         });
     }
