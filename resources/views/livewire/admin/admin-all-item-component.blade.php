@@ -36,32 +36,32 @@
                                     <th>Id</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Stock</th>
                                     <th>Price</th>
-                                    <th>Sale Price</th>
-                                    <th>Category</th>
+                                    <th>Original Price</th>
+                                    <th>Sales</th>
+                                    <th>ShopId</th>
                                     <th>Date</th>
                                     <th>Action</th>
                                 </tr>
                             <thead>
-                            {{--<tbody>
-                                @foreach ($products as $product)
+                            <tbody>
+                                @foreach ($items as $item)
                                     <tr>
-                                        <td>{{$product->id}}</td> 
-                                        <td><img src="{{asset('assets/images/products')}}/{{$product->image}}" width="60"></td>
-                                        <td>{{$product->name}}</td>
-                                        <td>{{$product->stock_status}}</td>
-                                        <td>{{$product->regular_price}}</td>
-                                        <td>{{$product->sale_price}}</td>
-                                        <td>{{$product->category->name}}</td>
-                                        <td>{{$product->created_at}}</td>
+                                        <td>{{$item->id}}</td> 
+                                        <td><img src="{{$item->images}}" width="60"></td>
+                                        <td>{{$item->name}}</td>
+                                        <td>{{$item->price}}</td>
+                                        <td>{{$item->original_price}}</td>
+                                        <td>{{$item->sales}}</td>
+                                        <td>{{$item->shopid}}</td>
+                                        <td>{{$item->created_at}}</td>
                                         <td>
-                                            <a href="{{route('admin.edit.product',['product_slug'=>$product->slug])}}"><i class="fa fa-edit fa-2x text-info"></i></a>
-                                            <a href="#" onclick="confirm('Are you sure, you want to delete this product?') || event.stopImmediatePropagation()" style="margin-left:10px;" wire:click.prevent="deleteProduct({{$product->id}})"><i class="fa fa-times fa-2x text-danger"></i></a>
+                                            <a href="#"><i class="fa fa-edit fa-2x text-info"></i></a>
+                                            <a href="#" style="margin-left:10px;"><i class="fa fa-times fa-2x text-danger"></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
-                            </tbody>--}}
+                            </tbody>
                         </table>
                         {{--{{$products->links()}}--}}
                     </div>
