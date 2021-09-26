@@ -85,7 +85,7 @@
 													</li>-->
 
 													<li class="menu-item">
-														<a title="Items" href="#">All Items</a>
+														<a title="Items" href="{{route('admin.all.items')}}">All Items</a>
 													</li>
 
 													<li class="menu-item">

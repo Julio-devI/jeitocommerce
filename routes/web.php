@@ -3,11 +3,14 @@
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\user\UserDashboardComponent;
+//Uses Admin
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminEditItemComponent;
+
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
+use App\Http\Livewire\Admin\AdminAllItemComponent;
 use Inertia\Inertia;
 
 /*
@@ -20,15 +23,6 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-/*Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});*/
 
 Route::get('/', HomeComponent::class)->name('home');
 
@@ -43,8 +37,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
 Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin/edit.item', AdminEditItemComponent::class)->name('admin.edit.item');
-    //Route::post('/admin/store', [ItemController::class, 'store']);
-    //Route::get('/admin/add.items', );
+    Route::get('/admin/all.item', AdminAllItemComponent::class)->name('admin.all.items');
 });
 
 //Routes for json

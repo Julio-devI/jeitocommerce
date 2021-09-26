@@ -19,17 +19,17 @@
                             </div>
 
                             <div class="col-md-6">
-                                <a href="{{route('admin.addproduct')}}" class="btn btn-success pull-right">Add New Item</a>
+                                <a href="#" class="btn btn-success pull-right">Add New Item</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="panel-body">
-                    @if(Session::has('message'))
+                    {{--@if(Session::has('message'))
                         <div class="alert alert-success" role="alert">
                             {{Session::get('message')}}
                         </div>
-                    @endif
+                    @endif--}}
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -44,7 +44,7 @@
                                     <th>Action</th>
                                 </tr>
                             <thead>
-                            <tbody>
+                            {{--<tbody>
                                 @foreach ($products as $product)
                                     <tr>
                                         <td>{{$product->id}}</td> 
@@ -61,9 +61,9 @@
                                         </td>
                                     </tr>
                                 @endforeach
-                            </tbody>
+                            </tbody>--}}
                         </table>
-                        {{$products->links()}}
+                        {{--{{$products->links()}}--}}
                     </div>
                 </div>
             </div>
