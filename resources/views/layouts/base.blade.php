@@ -88,6 +88,10 @@
 														<a title="Items" href="#">All Items</a>
 													</li>
 
+													<li class="menu-item">
+														<a title="Items" href="#">Add Items</a>
+													</li>
+
 													<li class= "menu-item">
 														<a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 													</li>
