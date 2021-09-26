@@ -7,6 +7,13 @@ use App\Models\Discount;
 
 class AdminAllDiscountsComponent extends Component
 {
+    public function deleteDiscount($id)
+    {
+        $discount = Discount::find($id);
+        $discount->delete();
+        session()->flash('message','Discount has been deleted successfully');
+    }
+
     public function render()
     {
         $discounts = Discount::all();

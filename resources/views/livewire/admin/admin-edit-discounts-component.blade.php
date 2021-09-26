@@ -6,7 +6,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-md-6">
-                                Add new Discount
+                                Edit Discount
                             </div>
 
                             <div class="col-md-6">
@@ -20,7 +20,7 @@
                             <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
                         @endif
 
-                        <form class="form-horizontal" wire:submit.prevent="storeDiscount" enctype="multipart/form-data">
+                        <form class="form-horizontal" wire:submit.prevent="updateDiscount" enctype="multipart/form-data">
                         @csrf
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Discount Label</label>
@@ -52,7 +52,7 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label"></label>
                                 <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary">Add new Discount</button>
+                                    <button type="submit" class="btn btn-primary">Edit Discount</button>
                                 </div>
                             </div>
                         </form>

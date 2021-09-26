@@ -166,8 +166,4 @@ class ItemController extends Controller
     {
         return csrf_token();
     }
-
-    public function render(){
-        return view('livewire.admin.admin-add-item-component')->layout('layouts.base'); 
-    }
 }
