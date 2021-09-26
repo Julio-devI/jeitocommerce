@@ -12,7 +12,7 @@ use App\Http\Livewire\Admin\AdminAllItemComponent;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
-
+use App\Http\Livewire\Admin\AdminAddDiscountComponent;
 use Inertia\Inertia;
 
 /*
@@ -40,8 +40,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin/edit.item', AdminEditItemComponent::class)->name('admin.edit.item');
     Route::get('/admin/all.item', AdminAllItemComponent::class)->name('admin.all.items');
-    Route::get('/admin/add.item', AdminAddItemComponent::class)->name('add.item'); 
-});
+    Route::get('/admin/add.item', AdminAddItemComponent::class)->name('add.item');
+
+    Route::get('/admin/add.discount', AdminAddDiscountComponent::class)->name('admin.add.discount');
+    });
 
 //Routes for json
 Route::post('/carregar_json', [ItemController::class, 'carregarJson']);
