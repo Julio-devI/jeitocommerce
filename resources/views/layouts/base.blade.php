@@ -89,7 +89,7 @@
 													</li>
 
 													<li class="menu-item">
-														<a title="Items" href="#">Add Items</a>
+														<a title="Items" href="{{route('admin.edit.item')}}">Add Items</a>
 													</li>
 
 													<li class= "menu-item">
