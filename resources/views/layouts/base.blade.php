@@ -97,7 +97,7 @@
 													</li>
 
 													<li class="menu-item">
-														<a title="Discounts" href="{{route('admin.add.discount')}}">All Discounts</a>
+														<a title="Discounts" href="{{route('admin.all.discount')}}">All Discounts</a>
 													</li>
 
 													<li class= "menu-item">

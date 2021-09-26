@@ -17,7 +17,7 @@ class CreateDiscountsTable extends Migration
             $table->id();
             $table->string('label')->nullable();
             $table->integer('valor')->nullable();
-            $table->boolean('ativo')->default(0);
+            $table->boolean('ativo')->default(1);
             $table->timestamps();
         });
     }
