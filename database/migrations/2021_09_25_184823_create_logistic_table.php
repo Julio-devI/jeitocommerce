@@ -17,7 +17,7 @@ class CreateLogisticTable extends Migration
             $table->id();
             $table->string('logistic_name');
             $table->boolean('is_free');
-            $table->timestamp('estimated_shipping_fee');
+            $table->double('estimated_shipping_fee');
             $table->boolean('enabled');
             $table->timestamps();
         });

@@ -6,6 +6,7 @@ use App\Http\Livewire\user\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ItemController;
 use Inertia\Inertia;
 
 /*
@@ -41,6 +42,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
 Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function() {
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
 });
+
+Route::post('/carregar_json', [ItemController::class, 'carregarJson']);
+Route::get('/pegar_codigo', [ItemController::class, 'index']);
+
 /*Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');*/
