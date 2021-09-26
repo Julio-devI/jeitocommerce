@@ -6,11 +6,13 @@ use App\Http\Livewire\user\UserDashboardComponent;
 //Uses Admin
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminEditItemComponent;
+use App\Http\Livewire\Admin\AdminAddItemComponent;
+use App\Http\Livewire\Admin\AdminAllItemComponent;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
-use App\Http\Livewire\Admin\AdminAllItemComponent;
+
 use Inertia\Inertia;
 
 /*
@@ -38,6 +40,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin/edit.item', AdminEditItemComponent::class)->name('admin.edit.item');
     Route::get('/admin/all.item', AdminAllItemComponent::class)->name('admin.all.items');
+    Route::get('/admin/add.item', AdminAddItemComponent::class)->name('add.item'); 
 });
 
 //Routes for json

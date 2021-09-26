@@ -110,6 +110,7 @@ class ItemController extends Controller
             'attribute_id' => $request->logistic_id
         ]);
         $tempItem->save();
+        session()->flash('message', 'Item added successfully');
     }
 
     public function update(Request $request){
@@ -163,6 +164,10 @@ class ItemController extends Controller
 
     public function index()
     {
-        return csrf_token(); 
+        return csrf_token();
+    }
+
+    public function render(){
+        return view('livewire.admin.admin-add-item-component')->layout('layouts.base'); 
     }
 }

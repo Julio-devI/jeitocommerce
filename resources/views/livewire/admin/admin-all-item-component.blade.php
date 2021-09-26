@@ -19,7 +19,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <a href="#" class="btn btn-success pull-right">Add New Item</a>
+                                <a href="{{route('add.item')}}" class="btn btn-success pull-right">Add New Item</a>
                             </div>
                         </div>
                     </div>
