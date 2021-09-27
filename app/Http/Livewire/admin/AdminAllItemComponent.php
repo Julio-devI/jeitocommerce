@@ -7,6 +7,13 @@ use App\Models\Item;
 
 class AdminAllItemComponent extends Component
 {
+    public function deleteItem($id)
+    {
+        $item = Item::find($id);
+        $item->delete();
+        session()->flash('message','Item has been deleted successfully');
+    }
+
     public function render()
     {
         $items = Item::all();

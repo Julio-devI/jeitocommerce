@@ -19,7 +19,7 @@
                         @if(Session::has('message'))
                             <div class="alert alert-success" role="alert">Session::get('message')</div>
                         @endif
-                        <form class="form-horizontal" enctype="multipart/form-data">
+                        <form class="form-horizontal" wire:submit.prevent='storeItem' enctype="multipart/form-data">
                         @csrf
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Item Status</label>
