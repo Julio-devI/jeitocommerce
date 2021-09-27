@@ -15,6 +15,7 @@ use App\Http\Livewire\Admin\AdminEditDiscountsComponent;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
+use App\Http\Livewire\Admin\AdminAddAttributeComponent;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
 use App\Http\Livewire\Admin\AdminAllCategoryComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
@@ -55,7 +56,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/admin/all.category', AdminAllCategoryComponent::class)->name('admin.all.category');
     Route::get('/admin/edit.category', AdminEditCategoryComponent::class)->name('admin.edit.category');
 
-    Route::get('/admin/add.attributes')->name('admin.add.attributes');
+    Route::get('/admin/add.attributes', AdminAddAttributeComponent::class)->name('admin.add.attributes');
     Route::get('/admin/all.attributes')->name('admin.all.attributes');
     Route::get('/admin/edit.attributes')->name('admin.edit.attributes');
     });
