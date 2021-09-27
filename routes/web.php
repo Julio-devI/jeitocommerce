@@ -54,6 +54,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/admin/add.category', AdminAddCategoryComponent::class)->name('admin.add.category');
     Route::get('/admin/all.category', AdminAllCategoryComponent::class)->name('admin.all.category');
     Route::get('/admin/edit.category', AdminEditCategoryComponent::class)->name('admin.edit.category');
+
+    Route::get('/admin/add.attributes')->name('admin.add.attributes');
+    Route::get('/admin/all.attributes')->name('admin.all.attributes');
+    Route::get('/admin/edit.attributes')->name('admin.edit.attributes');
     });
 
 //Routes for json
