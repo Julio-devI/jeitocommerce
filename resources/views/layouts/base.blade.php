@@ -89,11 +89,15 @@
 													</li>
 
 													<li class="menu-item">
-														<a title="#" href="#">All categories</a>
+														<a title="Categories" href="{{route('admin.all.category')}}">All categories</a>
 													</li>
 
 													<li class="menu-item">
 														<a title="#" href="#">All Attributes</a>
+													</li>
+
+													<li class="menu-item">
+														<a title="#" href="#">Logistic</a>
 													</li>
 
 													<li class="menu-item">

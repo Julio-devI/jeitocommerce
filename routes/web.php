@@ -8,13 +8,16 @@ use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminEditItemComponent;
 use App\Http\Livewire\Admin\AdminAddItemComponent;
 use App\Http\Livewire\Admin\AdminAllItemComponent;
+use App\Http\Livewire\Admin\AdminAddDiscountComponent;
+use App\Http\Livewire\Admin\AdminAllDiscountsComponent;
+use App\Http\Livewire\Admin\AdminEditDiscountsComponent;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
-use App\Http\Livewire\Admin\AdminAddDiscountComponent;
-use App\Http\Livewire\Admin\AdminAllDiscountsComponent;
-use App\Http\Livewire\Admin\AdminEditDiscountsComponent;
+use App\Http\Livewire\Admin\AdminAddCategoryComponent;
+use App\Http\Livewire\Admin\AdminAllCategoryComponent;
+use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 use Inertia\Inertia;
 
 /*
@@ -47,6 +50,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/admin/add.discount', AdminAddDiscountComponent::class)->name('admin.add.discount');
     Route::get('/admin/all.discount', AdminAllDiscountsComponent::class)->name('admin.all.discount');
     Route::get('/admin/edit.discount', AdminEditDiscountsComponent::class)->name('admin.edit.discount');
+
+    Route::get('/admin/add.category', AdminAddCategoryComponent::class)->name('admin.add.category');
+    Route::get('/admin/all.category', AdminAllCategoryComponent::class)->name('admin.all.category');
+    Route::get('/admin/edit.category', AdminEditCategoryComponent::class)->name('admin.edit.category');
     });
 
 //Routes for json
