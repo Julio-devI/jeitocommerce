@@ -93,7 +93,7 @@
 													</li>
 
 													<li class="menu-item">
-														<a title="#" href="#">All Attributes</a>
+														<a title="Attributes" href="{{route('admin.all.attributes')}}">All Attributes</a>
 													</li>
 
 													<li class="menu-item">

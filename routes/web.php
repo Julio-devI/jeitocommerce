@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Livewire\Admin\AdminAddAttributeComponent;
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
+use App\Http\Livewire\Admin\AdminAllAttributeComponent;
 use App\Http\Livewire\Admin\AdminAllCategoryComponent;
+use App\Http\Livewire\Admin\AdminEditAttributeComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 use Inertia\Inertia;
 
@@ -57,8 +59,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
     Route::get('/admin/edit.category', AdminEditCategoryComponent::class)->name('admin.edit.category');
 
     Route::get('/admin/add.attributes', AdminAddAttributeComponent::class)->name('admin.add.attributes');
-    Route::get('/admin/all.attributes')->name('admin.all.attributes');
-    Route::get('/admin/edit.attributes')->name('admin.edit.attributes');
+    Route::get('/admin/all.attributes', AdminAllAttributeComponent::class)->name('admin.all.attributes');
+    Route::get('/admin/edit.attributes', AdminEditAttributeComponent::class)->name('admin.edit.attributes');
     });
 
 //Routes for json

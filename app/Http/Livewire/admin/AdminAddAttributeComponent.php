@@ -24,7 +24,7 @@ class AdminAddAttributeComponent extends Component
         $attributes->is_mandatory = $this->is_mandatory;
         $attributes->attribute_value = $this->attribute_value;
         $attributes->save();
-        session()->flash('message', 'Category has been created successfully');
+        session()->flash('message', 'Attribute has been created successfully');
     }
 
     public function render()
