@@ -80,10 +80,6 @@
 														<a title="Dashboard" href="{{ route('admin.dashboard') }}">Dashboard</a>
 													</li>
 
-													<!-- adicionar a sintaxe na rota <li class="menu-item">
-														<a title="Categories" href="route('admin.categories')">Categories</a>
-													</li>-->
-
 													<li class="menu-item">
 														<a title="Items" href="{{route('admin.all.items')}}">All Items</a>
 													</li>
@@ -97,7 +93,7 @@
 													</li>
 
 													<li class="menu-item">
-														<a title="#" href="#">Logistic</a>
+														<a title="Logistic" href="{{route('admin.all.logistic')}}">Logistic</a>
 													</li>
 
 													<li class="menu-item">

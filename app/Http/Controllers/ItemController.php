@@ -72,7 +72,7 @@ class ItemController extends Controller
         return response()->json($tempItem->id, 200);
     }
 
-    public function store(Request $request){
+    /*public function store(Request $request){
         $tempItem = new Item();
         $tempItem->fill([
             'status' => $request->status,
@@ -111,9 +111,9 @@ class ItemController extends Controller
         ]);
         $tempItem->save();
         session()->flash('message', 'Item added successfully');
-    }
+    }*/
 
-    public function update(Request $request){
+    /*public function update(Request $request){
         $tempItem = Item::find($request->id);
         if($tempItem){
             $tempItem->fill([
@@ -160,7 +160,7 @@ class ItemController extends Controller
         if($tempItem){
             $tempItem->delete();
         }
-    }
+    }*/
 
     public function index()
     {
