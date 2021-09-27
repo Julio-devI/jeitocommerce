@@ -12,15 +12,21 @@ class AdminEditDiscountsComponent extends Component
     public $valor;
     public $ativo;
 
-    
+    public function mount($discount_id) {
+        $discount = Discount::where('id', $discount_id)->first();
 
-   /* public function updated($fields)
+        $this->label = $discount->label;
+        $this->valor = $discount->valor;
+        $this->ativo = $discount->ativo;
+    }
+
+    public function updated($fields)
     {
         $this->validateOnly($fields,[
             'label' => 'required',
             'valor' => 'required'
         ]);
-    }*/
+    }
 
     public function updateDiscount()
     {
@@ -28,7 +34,9 @@ class AdminEditDiscountsComponent extends Component
             'label' => 'required',
             'valor' => 'required',
         ]);
+
         $discount = Discount::find($this->discount_id);
+
         $discount->label = $this->label;
         $discount->valor = $this->valor;
         $discount->ativo = $this->ativo;
